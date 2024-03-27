@@ -15,6 +15,7 @@ class Loader
     public function __construct()
     {
         Helpers::registerIntegration('mycred');
+        Helpers::registerIntegration('mycred_cashcred');
 
         Helpers::createTransactionPage(
             esc_html__('myCred Transactions', 'ninjaforms-cryptopay'),
@@ -24,10 +25,24 @@ class Loader
             ['orderId']
         );
 
+        Hook::addFilter('apply_discount_mycred_cashcred', '__return_false');
         Hook::addAction('payment_finished_mycred', [$this, 'paymentFinished']);
         Hook::addFilter('payment_redirect_urls_mycred', [$this, 'paymentRedirectUrls']);
 
-        add_filter('mycred_setup_gateways', [$this, 'registerGateway']);
+        Hook::addFilter('receiver_mycred_cashcred', function (string $receiver, object $data) {
+            if ($data->getParams()->get('receiver')) {
+                return $data->getParams()->get('receiver');
+            }
+
+            return $receiver;
+        }, 10, 2);
+
+        add_filter('mycred_setup_gateways', [$this, 'registerBuyCredGateway']);
+        if (Helpers::exists()) {
+            add_filter('mycred_cashcred_setup_gateways', [$this, 'registerCashCredGateway']);
+        } else {
+            add_filter('mycred_cashcred_more_gateways_tab', [$this, 'showCashCredGateway']);
+        }
     }
 
     /**
@@ -71,17 +86,53 @@ class Loader
      * @param array<mixed> $gateways
      * @return array<mixed>
      */
-    public function registerGateway(array $gateways): array
+    public function registerBuyCredGateway(array $gateways): array
     {
         $gateways['cryptopay'] = [
             'title'         => Helpers::exists() ? 'CryptoPay' : 'CryptoPay Lite',
             'documentation' => 'https://beycanpress.gitbook.io/cryptopay-docs/overview/welcome',
-            'callback'      => [Gateway::class],
+            'callback'      => [BuyCredGateway::class],
             'icon'          => 'dashicons-admin-generic',
-            'external'      => true,
+            'external'      => false,
             'custom_rate'   => true
         ];
 
+        return $gateways;
+    }
+
+    /**
+     * @param array<mixed> $gateways
+     * @return array<mixed>
+     */
+    public function registerCashCredGateway(array $gateways): array
+    {
+        $gateways['cryptopay'] = [
+            'title'         => 'CryptoPay',
+            'documentation' => 'https://beycanpress.gitbook.io/cryptopay-docs/overview/welcome',
+            'callback'      => [CashCredGateway::class],
+            'icon'          => 'dashicons-admin-generic',
+            'external'      => false,
+            'custom_rate'   => true
+        ];
+
+        return $gateways;
+    }
+
+    /**
+     * @param array<mixed> $gateways
+     * @return array<mixed>
+     */
+    public function showCashCredGateway(array $gateways): array
+    {
+        $url = 'https://beycanpress.com/cryptopay/?utm_source=mycred_plugin&utm_medium=show_gateway';
+        $gateways['cryptopay'] = [
+            'icon'            =>    'dashicons dashicons-admin-generic static',
+            'text'            =>    'CryptoPay',
+            'additional_text' =>    'Only available in CryptoPay Premium',
+            'url'             =>    $url,
+            'status'          =>    'disabled',
+            'plugin'          =>    'cryptopay/cryptopay.php'
+        ];
         return $gateways;
     }
 }

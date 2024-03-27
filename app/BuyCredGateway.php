@@ -11,6 +11,7 @@ namespace BeycanPress\CryptoPay\MyCred;
 // phpcs:disable SlevomatCodingStandard.TypeHints.ParameterTypeHint
 
 use BeycanPress\CryptoPay\Payment;
+use BeycanPress\CryptoPay\Integrator\Hook;
 use BeycanPress\CryptoPay\Integrator\Helpers;
 use BeycanPress\CryptoPayLite\Payment as PaymentLite;
 use BeycanPress\CryptoPay\Types\Order\OrderType;
@@ -18,7 +19,7 @@ use BeycanPress\CryptoPay\Types\Transaction\ParamsType;
 use BeycanPress\CryptoPayLite\Types\Order\OrderType as LiteOrderType;
 use BeycanPress\CryptoPayLite\Types\Transaction\ParamsType as LiteParamsType;
 
-class Gateway extends \myCRED_Payment_Gateway
+class BuyCredGateway extends \myCRED_Payment_Gateway
 {
     /**
      * @var mixed
@@ -123,6 +124,10 @@ class Gateway extends \myCRED_Payment_Gateway
         $params = [
             'transactionId' => $this->transaction_id
         ];
+
+        Hook::addFilter('theme_mycred', function () {
+            return $this->prefs['theme'] ?? 'light';
+        });
 
         if (Helpers::exists()) {
             $cp = (new Payment('mycred'))

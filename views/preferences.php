@@ -2,7 +2,7 @@
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <h3><?php esc_html_e('Settings', 'mycred-cryptopay'); ?></h3>
         <div class="form-group">
-            <label for="<?php echo esc_attr($this->field_id('account')); ?>"><?php esc_html_e('Theme', 'mycred-cryptopay'); ?></label>
+            <label for="<?php echo esc_attr($this->field_id('theme')); ?>"><?php esc_html_e('Theme', 'mycred-cryptopay'); ?></label>
             <select name="<?php echo esc_attr($this->field_name('theme')); ?>" id="<?php echo esc_attr($this->field_id('theme')); ?>" class="form-control">
                 <option value="light" <?php selected($this->prefs['theme'], 'light'); ?>><?php esc_html_e('Light', 'mycred-cryptopay'); ?></option>
                 <option value="dark" <?php selected($this->prefs['theme'], 'dark'); ?>><?php esc_html_e('Dark', 'mycred-cryptopay'); ?></option>
