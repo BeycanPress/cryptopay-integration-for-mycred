@@ -1,4 +1,4 @@
-## Cryptocurrency Payment Gateway for myCred by CryptoPay
+## Cryptocurrency Payment Gateway and Withdrawal for myCred by CryptoPay
 
 First of all, we would like to point out that this plugin is not a standalone plugin. This plugin is a **<a href="https://beycanpress.com/cryptopay/?utm_source=github&utm_medium=cryptopay_mycred">cryptocurrency payment gateway for myCred</a>**. In other words, users who want to sell courses with cryptocurrency payments can use WordPress and myCred. However, this plugin is a plugin for CryptoPay and a cryptocurrency payment gateway for myCred. So it's actually CryptoPay, which is the main plugin that handles cryptocurrency payments for WordPress. Therefore, users must have both plugins.
 

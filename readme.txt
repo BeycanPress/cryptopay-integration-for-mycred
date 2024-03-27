@@ -1,4 +1,4 @@
-=== Cryptocurrency Payment Gateway for myCred by CryptoPay ===
+=== Cryptocurrency Payment Gateway and Withdrawal for myCred by CryptoPay ===
 Contributors: BeycanPress
 Tags: Bitcoin, Ethereum, Crypto, Payment, myCred
 Requires at least: 5.0
