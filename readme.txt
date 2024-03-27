@@ -9,7 +9,7 @@ Version: 1.0.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Cryptocurrency Payment Gateway Plugin for myCred, Cryptocurrency payments for WordPress, Bitcoin payments, Crypto payments, USDT, BTC, ETH, SOL
+Cryptocurrency Payment Gateway Plugin and Withdrawal for myCred, Cryptocurrency payments for WordPress, Bitcoin payments, Crypto payments, USDT, BTC, ETH, SOL
 
 == Description ==
 
