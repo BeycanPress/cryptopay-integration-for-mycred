@@ -42,10 +42,12 @@ Helpers::registerLiteModel(BeycanPress\CryptoPay\MyCred\Models\TransactionsLite:
 
 load_plugin_textdomain('mycred-cryptopay', false, basename(__DIR__) . '/languages');
 
-if (!defined('GF_MIN_WP_VERSION') /* TODO: check the plugin */) {
-    Helpers::requirePluginMessage('myCred', 'https://wordpress.org/plugins/mycred/');
-} elseif (Helpers::bothExists()) {
-    new BeycanPress\CryptoPay\MyCred\Loader();
-} else {
-    Helpers::requireCryptoPayMessage('myCred');
-}
+add_action('plugins_loaded', function (): void {
+    if (!class_exists('myCRED_Core')) {
+        Helpers::requirePluginMessage('myCred', 'https://wordpress.org/plugins/mycred/');
+    } elseif (Helpers::bothExists()) {
+        new BeycanPress\CryptoPay\MyCred\Loader();
+    } else {
+        Helpers::requireCryptoPayMessage('myCred');
+    }
+});
