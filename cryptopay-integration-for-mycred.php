@@ -10,7 +10,7 @@ defined('ABSPATH') || exit;
 // @phpcs:disable Generic.Files.LineLength
 
 /**
- * Plugin Name: myCred - CryptoPay Gateway
+ * Plugin Name: CryptoPay Integration for myCred
  * Version:     1.0.0
  * Plugin URI:  https://beycanpress.com/cryptopay/
  * Description: Adds Cryptocurrency payment gateway (CryptoPay) and crypto withdrawal for myCred.
@@ -21,7 +21,7 @@ defined('ABSPATH') || exit;
  * Text Domain: mycred-cryptopay
  * Tags: Cryptopay, Cryptocurrency, WooCommerce, WordPress, MetaMask, Trust, Binance, Wallet, Ethereum, Bitcoin, Binance smart chain, Payment, Plugin, Gateway, Moralis, Converter, API, coin market cap, CMC
  * Requires at least: 5.0
- * Tested up to: 6.4.3
+ * Tested up to: 6.5.0
  * Requires PHP: 8.1
 */
 
