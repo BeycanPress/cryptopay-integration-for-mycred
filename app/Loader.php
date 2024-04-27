@@ -64,6 +64,7 @@ class Loader
             }
         } else {
             $gateway->log_call($order->getId(), [
+                // translators: %s: transaction hash
                 sprintf(__('Payment not completed. Transaction hash: %s', 'mycred-cryptopay'), $data->getHash())
             ]);
         }

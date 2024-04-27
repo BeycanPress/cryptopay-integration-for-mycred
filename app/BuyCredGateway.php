@@ -139,7 +139,7 @@ class BuyCredGateway extends \myCRED_Payment_Gateway
                 ->setParams(LiteParamsType::fromArray($params));
         }
 
-        echo Helpers::run('ksesEcho', $cp->html(loading: true));
+        Helpers::run('ksesEcho', $cp->html(loading: true));
 
         echo wp_kses_post($this->checkout_cancel());
     }
