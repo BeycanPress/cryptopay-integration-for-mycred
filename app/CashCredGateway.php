@@ -219,7 +219,6 @@ class CashCredGateway extends \myCRED_Cash_Payment_Gateway
             return new NetworksType([$network]);
         });
 
-        Helpers::addStyle('main.min.css');
         Helpers::ksesEcho(
             (new Payment('mycred_cashcred'))
                 ->setOrder(OrderType::fromArray($order))

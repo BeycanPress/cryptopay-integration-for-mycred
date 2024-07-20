@@ -125,16 +125,17 @@ class BuyCredGateway extends \myCRED_Payment_Gateway
             'transactionId' => $this->transaction_id
         ];
 
-        Hook::addFilter('theme_mycred', function () {
-            return $this->prefs['theme'] ?? 'light';
+        Hook::addFilter('theme_mycred_buycred', function (array $theme) {
+            $theme['mode'] = $this->prefs['theme'] ?? 'light';
+            return $theme;
         });
 
         if (Helpers::exists()) {
-            $cp = (new Payment('mycred'))
+            $cp = (new Payment('mycred_buycred'))
                 ->setOrder(OrderType::fromArray($order))
                 ->setParams(ParamsType::fromArray($params));
         } else {
-            $cp = (new PaymentLite('mycred'))
+            $cp = (new PaymentLite('mycred_buycred'))
                 ->setOrder(LiteOrderType::fromArray($order))
                 ->setParams(LiteParamsType::fromArray($params));
         }

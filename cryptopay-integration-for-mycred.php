@@ -19,9 +19,9 @@ defined('ABSPATH') || exit;
  * License:     GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain: mycred-cryptopay
- * Tags: Cryptopay, Cryptocurrency, WooCommerce, WordPress, MetaMask, Trust, Binance, Wallet, Ethereum, Bitcoin, Binance smart chain, Payment, Plugin, Gateway, Moralis, Converter, API, coin market cap, CMC
+ * Tags: Bitcoin, Ethereum, Crypto, Payment, myCred
  * Requires at least: 5.0
- * Tested up to: 6.5.0
+ * Tested up to: 6.6
  * Requires PHP: 8.1
 */
 
@@ -37,12 +37,22 @@ define('MYCRED_CRYPTOPAY_SLUG', plugin_basename(__FILE__));
 
 use BeycanPress\CryptoPay\Integrator\Helpers;
 
-Helpers::registerModel(BeycanPress\CryptoPay\MyCred\Models\TransactionsPro::class);
-Helpers::registerLiteModel(BeycanPress\CryptoPay\MyCred\Models\TransactionsLite::class);
+/**
+ * @return void
+ */
+function myCredCryptoPayRegisterAddons(): void
+{
+    Helpers::registerModel(BeycanPress\CryptoPay\MyCred\Models\TransactionsPro::class);
+    Helpers::registerLiteModel(BeycanPress\CryptoPay\MyCred\Models\TransactionsLite::class);
+}
+
+myCredCryptoPayRegisterAddons();
 
 load_plugin_textdomain('mycred-cryptopay', false, basename(__DIR__) . '/languages');
 
 add_action('plugins_loaded', function (): void {
+    myCredCryptoPayRegisterAddons();
+
     if (!class_exists('myCRED_Core')) {
         Helpers::requirePluginMessage('myCred', 'https://wordpress.org/plugins/mycred/');
     } elseif (Helpers::bothExists()) {

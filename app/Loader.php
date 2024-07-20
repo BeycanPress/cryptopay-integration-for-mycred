@@ -14,20 +14,20 @@ class Loader
      */
     public function __construct()
     {
-        Helpers::registerIntegration('mycred');
+        Helpers::registerIntegration('mycred_buycred');
         Helpers::registerIntegration('mycred_cashcred');
 
         Helpers::createTransactionPage(
             esc_html__('myCred Transactions', 'ninjaforms-cryptopay'),
-            'mycred',
+            'mycred_buycred',
             10,
             [],
             ['orderId']
         );
 
         Hook::addFilter('apply_discount_mycred_cashcred', '__return_false');
-        Hook::addAction('payment_finished_mycred', [$this, 'paymentFinished']);
-        Hook::addFilter('payment_redirect_urls_mycred', [$this, 'paymentRedirectUrls']);
+        Hook::addAction('payment_finished_mycred_buycred', [$this, 'paymentFinished']);
+        Hook::addFilter('payment_redirect_urls_mycred_buycred', [$this, 'paymentRedirectUrls']);
 
         Hook::addFilter('receiver_mycred_cashcred', function (string $receiver, object $data) {
             if ($data->getParams()->get('receiver')) {

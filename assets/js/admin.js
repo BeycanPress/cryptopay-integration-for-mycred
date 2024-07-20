@@ -4,7 +4,6 @@
         const helpers = window.cpHelpers;
         const app = window.CryptoPayApp;
         const lang = window.CryptoPayLang;
-        const modal = window.CryptoPayModal;
         const payNowFunction = $._data($("#cashcred_paynow")[0] || $(), "events").click[0]?.handler;
 
         const ourPayFunction = function () {
@@ -91,7 +90,7 @@
                         ${lang.openInExplorer}
                     </a>
                 `).then(() => {
-                    modal.close();
+                    app.modal.close();
                 });
                 ourPayFunction();
                 alreadyPaid = true;
@@ -107,7 +106,7 @@
                     return payNowFunction(e);
                 }
 
-                modal.open();
+                app.modal.open();
             });
         }
     });
