@@ -221,6 +221,7 @@ class CashCredGateway extends \myCRED_Cash_Payment_Gateway
 
         Helpers::ksesEcho(
             (new Payment('mycred_cashcred'))
+                ->setConfirmation(false)
                 ->setOrder(OrderType::fromArray($order))
                 ->setParams(ParamsType::fromArray($params))
                 ->modal()
