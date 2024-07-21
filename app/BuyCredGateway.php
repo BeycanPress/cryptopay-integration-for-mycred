@@ -151,7 +151,7 @@ class BuyCredGateway extends \myCRED_Payment_Gateway
      */
     public function ajax_buy(): void
     {
-        $this->send_json(esc_html__('This gateway does not support AJAX payments.', 'mycred-cryptopay'));
+        $this->send_json(esc_html__('This gateway does not support AJAX payments.', 'cryptopay-integration-for-mycred'));
     }
 
     /**

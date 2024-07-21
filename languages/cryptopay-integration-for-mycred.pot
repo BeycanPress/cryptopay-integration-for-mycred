@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CryptoPay Integration for myCred\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-27 10:16+0000\n"
+"POT-Creation-Date: 2024-07-21 10:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -13,8 +13,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.6.7; wp-6.4.3\n"
-"X-Domain: mycred-cryptopay"
+"X-Loco-Version: 2.6.11; wp-6.6\n"
+"X-Domain: cryptopay-integration-for-mycred"
 
 #: views/cashcred.php:48
 msgid "Address"
@@ -32,6 +32,10 @@ msgstr ""
 
 #: views/cashcred.php:4
 msgid "CryptoPay Details"
+msgstr ""
+
+#. Name of the plugin
+msgid "CryptoPay Integration for myCred"
 msgstr ""
 
 #: views/cashcred-preferences.php:16 views/preferences.php:15
@@ -70,10 +74,6 @@ msgstr ""
 msgid "Minimum Points Withdrawal"
 msgstr ""
 
-#. Name of the plugin
-msgid "CryptoPay Integration for myCred"
-msgstr ""
-
 #: views/cashcred.php:27
 msgid "Payment currency"
 msgstr ""
@@ -82,7 +82,8 @@ msgstr ""
 msgid "Payment network"
 msgstr ""
 
-#: app/Loader.php:67
+#. %s: transaction hash
+#: app/Loader.php:68
 #, php-format
 msgid "Payment not completed. Transaction hash: %s"
 msgstr ""
@@ -99,6 +100,6 @@ msgstr ""
 msgid "Theme"
 msgstr ""
 
-#: app/BuyCredGateway.php:153
+#: app/BuyCredGateway.php:154
 msgid "This gateway does not support AJAX payments."
 msgstr ""

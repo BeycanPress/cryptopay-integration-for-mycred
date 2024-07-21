@@ -1,14 +1,14 @@
 
 <div id="panel_<?php echo esc_attr($key); ?>" class="cashcred_panel">
 
-<h3><?php echo esc_html(apply_filters('mycred_cashcred_cryptopay_title', __('CryptoPay Details', 'mycred-cryptopay'))); ?></h3>
+<h3><?php echo esc_html(apply_filters('mycred_cashcred_cryptopay_title', __('CryptoPay Details', 'cryptopay-integration-for-mycred'))); ?></h3>
 
 <?php do_action('mycred_cashcred_before_cryptopay_form'); ?>
 
 <div class="form-group">
     <div>
         <label>
-            <?php esc_html_e('Payment network', 'mycred-cryptopay'); ?>
+            <?php esc_html_e('Payment network', 'cryptopay-integration-for-mycred'); ?>
         </label>
     </div>
     <div>
@@ -24,7 +24,7 @@
 <div class="form-group">
     <div>
         <label>
-            <?php esc_html_e('Payment currency', 'mycred-cryptopay'); ?>
+            <?php esc_html_e('Payment currency', 'cryptopay-integration-for-mycred'); ?>
         </label>
     </div>
     <div>
@@ -45,7 +45,7 @@
 <div class="form-group">
     <div>
         <label>
-            <?php esc_html_e('Address', 'mycred-cryptopay'); ?>
+            <?php esc_html_e('Address', 'cryptopay-integration-for-mycred'); ?>
         </label>
     </div>
     <div>

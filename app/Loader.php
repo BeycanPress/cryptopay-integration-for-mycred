@@ -59,13 +59,13 @@ class Loader
                 $gateway->trash_pending_payment($order->getId());
             } else {
                 $gateway->log_call($order->getId(), [
-                    sprintf(esc_html__('Failed to credit users account.', 'mycred-cryptopay'))
+                    sprintf(esc_html__('Failed to credit users account.', 'cryptopay-integration-for-mycred'))
                 ]);
             }
         } else {
             $gateway->log_call($order->getId(), [
                 // translators: %s: transaction hash
-                sprintf(__('Payment not completed. Transaction hash: %s', 'mycred-cryptopay'), $data->getHash())
+                sprintf(__('Payment not completed. Transaction hash: %s', 'cryptopay-integration-for-mycred'), $data->getHash())
             ]);
         }
     }

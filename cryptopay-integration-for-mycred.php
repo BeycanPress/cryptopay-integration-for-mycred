@@ -18,7 +18,7 @@ defined('ABSPATH') || exit;
  * Author URI:  https://beycanpress.com
  * License:     GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
- * Text Domain: mycred-cryptopay
+ * Text Domain: cryptopay-integration-for-mycred
  * Tags: Bitcoin, Ethereum, Crypto, Payment, myCred
  * Requires at least: 5.0
  * Tested up to: 6.6
@@ -48,7 +48,7 @@ function myCredCryptoPayRegisterAddons(): void
 
 myCredCryptoPayRegisterAddons();
 
-load_plugin_textdomain('mycred-cryptopay', false, basename(__DIR__) . '/languages');
+load_plugin_textdomain('cryptopay-integration-for-mycred', false, basename(__DIR__) . '/languages');
 
 add_action('plugins_loaded', function (): void {
     myCredCryptoPayRegisterAddons();
