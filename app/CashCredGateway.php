@@ -176,6 +176,14 @@ class CashCredGateway extends \myCRED_Cash_Payment_Gateway
 
         $this->networks = Helpers::getNetworks()->toArray();
 
+        wp_enqueue_script(
+            'cashcred-main',
+            MYCRED_CRYPTOPAY_URL . 'assets/js/main.js',
+            ['jquery'],
+            MYCRED_CRYPTOPAY_VERSION,
+            true
+        );
+
         require MYCRED_CRYPTOPAY_DIR . 'views/cashcred.php';
     }
 
