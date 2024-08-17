@@ -38,6 +38,11 @@ With the default configuration, this plugin, in itself, does not:
 * send any data to external servers;
 * use cookies.
 
+= 3rd Party Libraries & API's =
+* https://beycanpress.com/
+    * Privacy policy: https://beycanpress.com/privacy-policy/
+    * This is our website. We use it to provide support and sell premium plugins.
+
 = Translations =
 
 You can easily translate with Loco translate.

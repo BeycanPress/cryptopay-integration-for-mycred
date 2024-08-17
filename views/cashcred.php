@@ -1,4 +1,4 @@
-
+<?php if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
 <div id="panel_<?php echo esc_attr($key); ?>" class="cashcred_panel">
     <h3><?php echo esc_html(apply_filters('mycred_cashcred_cryptopay_title', __('CryptoPay Details', 'cryptopay-integration-for-mycred'))); ?></h3>
 

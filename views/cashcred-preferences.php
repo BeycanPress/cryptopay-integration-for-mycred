@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
 <div class="row">
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <h3><?php esc_html_e('Settings', 'cryptopay-integration-for-mycred'); ?></h3>

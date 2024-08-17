@@ -18,7 +18,7 @@ class Loader
         Helpers::registerIntegration('mycred_cashcred');
 
         Helpers::createTransactionPage(
-            esc_html__('myCred Transactions', 'ninjaforms-cryptopay'),
+            esc_html__('myCred Transactions', 'cryptopay-integration-for-mycred'),
             'mycred_buycred',
             10,
             [],
