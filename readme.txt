@@ -15,20 +15,27 @@ Cryptocurrency Payment Gateway and Withdrawal for myCred, Cryptocurrency payment
 
 ### Cryptocurrency Payment Gateway for myCred by CryptoPay
 
-First of all, we would like to point out that this plugin is not a standalone plugin. This plugin is a **<a href="https://beycanpress.com/cryptopay/?utm_source=wporg_readme&utm_medium=cryptopay_mycred">cryptocurrency payment gateway for myCred</a>**. In other words, users who want to sell courses with cryptocurrency payments can use WordPress and myCred. However, this plugin is a plugin for CryptoPay and a cryptocurrency payment gateway for myCred. So it's actually CryptoPay, which is the main plugin that handles cryptocurrency payments for WordPress. Therefore, users must have both plugins.
+It looks like you're looking for a plugin to accept cryptocurrency payments or pay your users with cryptocurrencies on your WordPress website where you've added gamification with myCred. What if we told you that you've come to the right place?
 
-Thanks to this plugin, you can receive **<a href="https://beycanpress.com/cryptopay/?utm_source=wporg_readme&utm_medium=cryptopay_mycred">cryptocurrency payments</a>** from many Blockchain networks, especially Bitcoin, Ethereum, Solana, and sell paid courses with cryptocurrencies on your WordPress site with the myCred plugin.
+CryptoPay is a great plugin built entirely for the WordPress ecosystem, allowing you to receive peer-to-peer and commission-free cryptocurrency payments.
+
+This integration plugin allows you to use CryptoPay with myCred and let your users pay you with cryptocurrencies and make deposits with buyCred, as well as make crypto payments to your users with cashCred.
 
 What is CryptoPay?
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3vaoFL4XG10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Review CryptoPay Lite: **<a href="https://wordpress.org/plugins/cryptopay-wc-lite/">Cryptocurrency payment gateway for myCred</a>**
+#### This plugin is an integration plugin. So basically you need to have the following two plugins.
 
-Review CryptoPay Premium: **<a href="https://beycanpress.com/cryptopay/?utm_source=wporg_readme&utm_medium=cryptopay_mycred">Cryptocurrency payments for WooCommerce</a>**
+**<a href="https://wordpress.org/plugins/cryptopay-wc-lite/">Review CryptoPay Lite</a>**
 
-Review myCred: **<a href="https://wordpress.org/plugins/mycred/">myCred</a>**
+**<a href="https://beycanpress.com/cryptopay/?utm_source=wporg_readme&utm_medium=mycred">Review CryptoPay Premium</a>**
 
-See **<a href="https://cryptopay.beycanpress.net/" target="_blank">Demo</a>**
+**<a href="https://wordpress.org/plugins/mycred/">Review myCred</a>**
+
+See CryptoPay Demo **<a href="https://cryptopay.beycanpress.net" target="_blank">Demo</a>**
+
+#### Note: 
+The buyCred payment gateway is available in both lite and premium, but the cashCred payment gateway is only available in premium.
 
 = Privacy notices =
 
@@ -46,6 +53,15 @@ With the default configuration, this plugin, in itself, does not:
 = Translations =
 
 You can easily translate with Loco translate.
+
+== Screenshots ==
+
+1. Screen shot 1
+2. Screen shot 2
+3. Screen shot 3
+4. Screen shot 4
+5. Screen shot 5
+6. Screen shot 6
 
 == Installation ==
 
