@@ -32,7 +32,7 @@ What is CryptoPay?
 
 **<a href="https://wordpress.org/plugins/mycred/">Review myCred</a>**
 
-See CryptoPay Demo **<a href="https://cryptopay.beycanpress.net" target="_blank">Demo</a>**
+**<a href="https://cryptopay.beycanpress.net" target="_blank">See CryptoPay Demo</a>**
 
 #### Note: 
 The buyCred payment gateway is available in both lite and premium, but the cashCred payment gateway is only available in premium.
