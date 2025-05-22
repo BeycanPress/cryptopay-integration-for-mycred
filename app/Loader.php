@@ -17,13 +17,15 @@ class Loader
         Helpers::registerIntegration('mycred_buycred');
         Helpers::registerIntegration('mycred_cashcred');
 
-        Helpers::createTransactionPage(
-            esc_html__('myCred Transactions', 'cryptopay-integration-for-mycred'),
-            'mycred_buycred',
-            10,
-            [],
-            ['orderId']
-        );
+        add_action('init', function (): void {
+            Helpers::createTransactionPage(
+                esc_html__('myCred Transactions', 'cryptopay-integration-for-mycred'),
+                'mycred_buycred',
+                9,
+                [],
+                ['orderId']
+            );
+        });
 
         Hook::addFilter('apply_discount_mycred_cashcred', '__return_false');
         Hook::addAction('payment_finished_mycred_buycred', [$this, 'paymentFinished']);
